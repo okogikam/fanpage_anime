@@ -6,6 +6,7 @@
     --drk-blue: #046582;
     --black: #6E7582;
     --shadow: 0 4px 6px rgb(49 54 68 / 5%), 0 5px 20px rgb(49 54 68 / 8%);
+    --shadow2: 0 4px 6px rgb(49 54 68 / 19%), 0 5px 20px rgb(49 54 68 / 30%);
 }
 *{
     box-sizing: border-box;
@@ -18,6 +19,25 @@ body{
 img{
     max-width: 100%;
 }
+header{
+    position: relative;
+}
+main{
+    padding: 30px 20px;
+}
+.text-right{
+    text-align: right;
+}
+.card{
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    padding: 10px;
+    margin: 10px 0px;
+    border-radius: 5px;
+}
+.card:hover{
+    box-shadow: var(--shadow2);
+}
 .banner{
     height: 200px;
     overflow: hidden;
@@ -25,21 +45,84 @@ img{
 .privew{
     position: relative;
     background-color: var(--white);
-    min-height: 200px;
-    padding: 100px 30px;
+    
+}
+.privew{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    
 }
 .info{
-    padding: 0px 30px;
-    display: flex;
-    gap: 5px;
+    margin-top: -110px;
+    position: relative;
+   display: grid;
+   grid-template-columns: 110px auto;
+   gap: 20px;
+   align-items: flex-end;
+   
 }
 .cover{
-    width: 100px;
-    border: 4px solid black;
+    border: 5px solid var(--black);
     display: flex;
-    position: absolute;
-    top: -40px;
+}
+.btn{
+    padding: 5px 10px;
+}
+.like{
+    background-color: var(--clr-primary);
+    width: 150px;
+    overflow: auto;
+    border: none;
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+}
+.like:hover{
+    background-color: var(--clr-secondary);
 }
 .title{
-    /* text-align: right; */
+    padding: 40px 0px 10px 0px;
+    text-transform: capitalize;
+}
+.topmenu nav{
+    padding: 30px 0px;
+}
+.topmenu a{
+    text-decoration: none;
+    padding: 15px 10px;
+    position: relative;
+    /* background-color: var(--drk-blue); */
+}
+.topmenu a:hover::after{
+    content: "";
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    background-color: var(--drk-blue);
+    transform: scale(1,1);
+    transition: transform 200ms ease-in;
+}
+.table{
+    width: 100%;
+}
+.info-char{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.char,.char2{
+    display: grid;
+    gap: 5px;
+}
+.char{
+    grid-template-columns: 50px auto;
+}
+.char2{
+    grid-template-columns: auto 50px;
+}
+.char img{
+    width: 50px;
 }

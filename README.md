@@ -24,7 +24,9 @@
 - Live Site URL: (https://okogikam.github.io/fanpage_anime/)
 - example URL : (https://anichart.net/)
 ## My process
-
+-halaman index/home
+-halaman jadwal tayang anime
+-halaman anime (proses)
 ### Built with
 
 - Semantic HTML5 markup
