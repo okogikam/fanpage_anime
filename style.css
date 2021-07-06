@@ -1,6 +1,249 @@
 :root {
-  --white: #fff;
+  --white: #f9f9f9;
+  --clr-primary: #cdf0ea;
+  --clr-secondary: #beaee2;
+  --purple: #beaee2;
+  --drk-blue: #046582;
+  --black: #6e7582;
+  --shadow: 0 4px 6px rgb(49 54 68 / 5%), 0 5px 20px rgb(49 54 68 / 8%);
 }
 * {
   box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  background-color: var(--clr-primary);
+}
+.container {
+  max-width: 100vw;
+  overflow: auto;
+}
+.post {
+  display: grid;
+  /* padding: 10px; */
+  gap: 10px;
+}
+header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--purple);
+  display: flex;
+  padding: 10px 0px;
+  z-index: 10;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  width: 90%;
+}
+.menu {
+  padding: 300px;
+}
+.menu a {
+  position: relative;
+}
+.menu a:hover::after,
+.menu a:focus::after {
+  content: "";
+  height: 3px;
+  width: 100%;
+  background-color: var(--white);
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  z-index: 10;
+  animation: menuAnimation 300ms linear;
+}
+@keyframes menuAnimation {
+  0% {
+    transform: scale(0, 0);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+.menu-1,
+.menu-2,
+.menu-control {
+  background-color: var(--drk-blue);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.menu-1 a,
+.menu-2 a {
+  color: var(--white);
+  text-decoration: none;
+  padding: 3px;
+}
+.menu-2,
+.menu-1 {
+  display: none;
+}
+.menu-control {
+  border: none;
+  height: 30px;
+}
+.control {
+  width: 30px;
+  height: 2px;
+  background-color: white;
+  position: relative;
+}
+.control::after,
+.control::before {
+  content: "";
+  width: 30px;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+}
+.control::after {
+  top: -6px;
+  left: 0;
+}
+.control::before {
+  bottom: -5px;
+  left: 0;
+}
+
+main {
+  /* height: 100vh; */
+  padding-bottom: 100px;
+}
+.pencarian {
+  padding: 20px;
+  background-color: var(--white);
+  display: flex;
+  justify-content: space-between;
+}
+.cari {
+  width: 70%;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(192, 190, 190);
+}
+.btn {
+  padding: 3px 6px;
+  border: none;
+  box-shadow: 1px 1px 3px black;
+}
+main .title {
+  padding: 10px 20px;
+  color: var(--black);
+  text-transform: capitalize;
+}
+/* card style  */
+.card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-radius: 5px;
+  overflow: auto;
+  max-width: 480px;
+  margin: 10px 0px;
+  flex: 0 0 100%;
+  box-shadow: var(--shadow);
+}
+.card-header {
+  position: relative;
+}
+.card-image img {
+  max-width: 100%;
+}
+.card-title {
+  position: absolute;
+  top: 75%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.815);
+  color: var(--white);
+  overflow: auto;
+  padding: 5px;
+}
+.card-header:hover .card-title {
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-body {
+  background-color: var(--white);
+  padding: 10px;
+  color: var(--black);
+  position: relative;
+}
+.card-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  min-height: 30px;
+  background-color: var(--clr-secondary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 5px;
+}
+.card-sm {
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+  display: flex;
+  background-color: var(--white);
+  align-items: center;
+  overflow: hidden;
+  margin: 10px 0px;
+}
+.card-sm-title {
+  text-transform: capitalize;
+  font-weight: 700;
+}
+.card-sm-img {
+  max-width: 60px;
+  height: 100%;
+  background-color: var(--clr-secondary);
+}
+.card-sm-img img {
+  width: 100%;
+  height: 100%;
+}
+.card-sm-body {
+  padding: 0px 10px;
+}
+
+/* ./card style */
+.day {
+  max-width: 400px;
+  flex: 0 0 100%;
+  padding: 0px 5px 0px 5px;
+}
+.airing {
+  /* padding: 0px 30px; */
+  max-width: 90%;
+  min-height: 100vh;
+  padding-left: 5px;
+  display: flex;
+  scrollbar-width: none;
+  -ms-scrollbar-width: none;
+  /* gap: 10px; */
+  padding-right: 5px;
+}
+.list {
+  display: grid;
+}
+.btn-kat,
+.more {
+  background-color: var(--drk-blue);
+  color: var(--white);
+  border: none;
+  padding: 3px 6px;
+  border-radius: 5px;
+}
+.view {
+  display: flex;
 }
