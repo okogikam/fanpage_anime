@@ -1,0 +1,27 @@
+:root {
+  --white: #f9f9f9;
+  --clr-primary: #cdf0ea;
+  --clr-secondary: #beaee2;
+  --purple: #beaee2;
+  --drk-blue: #046582;
+  --black: #6e7582;
+}
+@media screen and (min-width: 900px) {
+  .privew {
+    grid-template-columns: 250px auto;
+    margin: auto;
+  }
+  .info {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .cover {
+    width: 130px;
+  }
+  .main {
+    display: grid;
+    grid-template-columns: 200px auto;
+  }
+}

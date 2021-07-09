@@ -1,78 +1,78 @@
-:root{
-    --white: #F9F9F9;
-    --clr-primary:#CDF0EA;
-    --clr-secondary: #BEAEE2;
-    --purple: #BEAEE2;
-    --drk-blue: #046582;
-    --black: #6E7582;
-    }
-@media screen and (min-width: 900px){
-    .post{
-        grid-template-columns: repeat(3,1fr);
-    }
-    .container{
-        display: grid;
-        grid-template-rows: 3;
-    }
-    header{
-        position: relative;
-        grid-row: 1/2;
-        height: 230px;
-        background-color: var(--drk-blue);
-    }
-    header::before{
-        content: "";
-        background-image: url(src/photo5.jpg);
-        background-size: cover;
-        background-position: center;
-        opacity: 0.1;
-        filter: grayscale(100%);
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-    }
-    nav{
-        justify-content: flex-start;
-        align-items: baseline;
-        margin: 0px auto;
-    }
-    .menu-1,.menu-2{
-        display: flex;
-        background-color: transparent;
-    }
-    .menu-control{
-        display: none;
-    }
-    .pencarian{
-        display: none;
-    }
-    main{
-        grid-row: 2/3;
-        padding: 30px;
-        position: relative;
-        top: -180px;
-        z-index: 10;
-    }    
-    main .title{
-        color: var(--drk-blue);
-    }
-    .day:first-of-type .title{
-        color: var(--white);
-    }
-    .airing{
-        flex-flow: column;
-        margin: auto;
-        width: 90%;
-    }
-    .list{
-        
-        grid-template-columns: repeat(4,1fr);
-        gap: 10px;
-    }
-    .day{
-        max-width: 100%;
-        flex: unset;
-    }
+:root {
+  --white: #f9f9f9;
+  --clr-primary: #cdf0ea;
+  --clr-secondary: #beaee2;
+  --purple: #beaee2;
+  --drk-blue: #046582;
+  --black: #6e7582;
+}
+@media screen and (min-width: 900px) {
+  .post {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .container {
+    display: grid;
+    grid-template-rows: 3;
+  }
+  header {
+    position: relative;
+    grid-row: 1/2;
+    height: 230px;
+    background-color: var(--drk-blue);
+  }
+  header::before {
+    content: "";
+    background-image: url(src/photo5.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1;
+    filter: grayscale(100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+  nav {
+    justify-content: flex-start;
+    align-items: baseline;
+    margin: 0px auto;
+  }
+  .menu-1,
+  .menu-2 {
+    display: flex;
+    background-color: transparent;
+  }
+  .menu-control {
+    display: none;
+  }
+  .pencarian {
+    display: none;
+  }
+  main {
+    grid-row: 2/3;
+    padding: 30px;
+    position: relative;
+    top: -180px;
+    z-index: 10;
+  }
+  main .title {
+    color: var(--drk-blue);
+  }
+  .day:first-of-type .title {
+    color: var(--white);
+  }
+  .airing {
+    flex-flow: column;
+    margin: auto;
+    width: 90%;
+  }
+  .list {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  .day {
+    max-width: 100%;
+    flex: unset;
+  }
 }
