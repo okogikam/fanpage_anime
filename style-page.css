@@ -69,12 +69,16 @@ main {
   border: 5px solid var(--black);
   display: flex;
 }
+.btn-box {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 10px;
+}
 .btn {
   padding: 5px 10px;
 }
 .like {
   background-color: var(--clr-primary);
-  width: 150px;
   overflow: auto;
   border: none;
   border-radius: 5px;
@@ -197,4 +201,44 @@ aside .menu a:hover {
 }
 #menuControl:checked ~ nav {
   display: grid;
+}
+.episode {
+  display: flex;
+  gap: 10px;
+  flex-wrap: nowrap;
+  overflow: scroll;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+.episode .card {
+  display: flex;
+  flex: 0 0 90%;
+  scroll-snap-align: start;
+  background-color: var(--black);
+  padding: 0px;
+  overflow: auto;
+}
+.episode .card-header {
+  display: flex;
+  max-height: 200px;
+  background-color: white;
+  justify-content: center;
+}
+.episode .card-body {
+  display: flex;
+  padding: 10px;
+  color: var(--white);
+}
+.card-title {
+  text-transform: capitalize;
+  font-weight: 400;
+}
+.episode .title-box {
+  background-color: var(--white);
+  padding: 10px;
+  box-shadow: var(--shadow1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

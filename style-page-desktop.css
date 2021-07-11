@@ -56,4 +56,8 @@
     color: var(--white);
     padding: 15px 30px;
   }
+  .episode {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+  }
 }
