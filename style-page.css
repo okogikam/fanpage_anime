@@ -160,6 +160,8 @@ aside nav {
 aside .menu {
   display: grid;
   grid-template-columns: 1fr;
+  max-height: 80vh;
+  overflow: auto;
 }
 aside .menu a {
   text-decoration: none;
