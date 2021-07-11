@@ -25,6 +25,10 @@ header {
 main {
   padding: 30px 20px;
 }
+.airing {
+  display: flex;
+  justify-content: space-between;
+}
 .text-right {
   text-align: right;
 }

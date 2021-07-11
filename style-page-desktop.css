@@ -23,5 +23,37 @@
   .main {
     display: grid;
     grid-template-columns: 200px auto;
+    gap: 10px;
+  }
+  .airing {
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+  }
+  aside {
+    position: absolute;
+    flex-flow: row;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: unset;
+    background-color: rgba(0, 0, 0, 0.644);
+    box-shadow: var(--shadow2);
+  }
+  aside label {
+    display: none;
+  }
+  aside nav {
+    display: flex;
+    background-color: transparent;
+    box-shadow: unset;
+    margin: 0px auto;
+  }
+  aside .menu {
+    display: flex;
+  }
+  aside .menu a {
+    color: var(--white);
+    padding: 15px 30px;
   }
 }
