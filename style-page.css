@@ -156,12 +156,12 @@ aside nav {
   box-shadow: var(--shadow2);
   border-radius: 5px;
   margin-bottom: 10px;
+  max-height: 80vh;
+  overflow: auto;
 }
 aside .menu {
   display: grid;
   grid-template-columns: 1fr;
-  max-height: 80vh;
-  overflow: auto;
 }
 aside .menu a {
   text-decoration: none;
