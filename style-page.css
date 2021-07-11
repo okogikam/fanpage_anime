@@ -249,3 +249,46 @@ aside .menu a:hover {
   justify-content: center;
   align-items: center;
 }
+.news {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.news .card {
+  display: grid;
+  grid-template-columns: 100px auto;
+  padding: 0px;
+  overflow: auto;
+}
+.news .card-header {
+  display: flex;
+}
+.news .card-title {
+  border-bottom: 1px solid var(--black);
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.news .card-body {
+  position: relative;
+  padding: 10px;
+  overflow: auto;
+}
+.news .card-text {
+  max-height: 100px;
+  overflow: hidden;
+  text-align: justify;
+}
+.card-text:hover,
+.card-text:focus {
+  overflow-y: auto;
+}
+.news .card-footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: right;
+  padding: 5px;
+  z-index: 10;
+  background-color: var(--white);
+}
