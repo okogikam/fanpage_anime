@@ -1,0 +1,10 @@
+.char-box {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0px 10px;
+}
+@media screen and (min-width: 900px) {
+  .char-box {
+    grid-template-columns: 1fr 1fr;
+  }
+}
